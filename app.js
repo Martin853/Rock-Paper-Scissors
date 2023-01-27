@@ -8,10 +8,12 @@ function getComputerChoice() {
 function playerSelection() {
   ans = prompt("Rock Paper Scissors...");
   ans = ans.toLowerCase();
-  if (ans != "rock" || "paper" || "scissors") {
+
+  if (ans === "rock" || "paper" || "scissors") {
+    return ans;
+  } else {
     playerSelection();
   }
-  return ans;
 }
 
 function playRound() {
@@ -77,4 +79,6 @@ function game() {
   }
 }
 
-game();
+while (true == true) {
+  game();
+}
