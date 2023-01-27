@@ -9,7 +9,19 @@ function playerSelection() {
   ans = prompt("Rock Paper Scissors...");
   ans = ans.toLowerCase();
 
-  if (ans === "rock" || "paper" || "scissors") {
+  if (ans === "rock") {
+    return ans;
+  } else {
+    playerSelection();
+  }
+
+  if (ans === "paper") {
+    return ans;
+  } else {
+    playerSelection();
+  }
+
+  if (ans === "scissors") {
     return ans;
   } else {
     playerSelection();
