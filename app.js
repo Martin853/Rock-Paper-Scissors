@@ -8,6 +8,9 @@ function getComputerChoice() {
 function playerSelection() {
   ans = prompt("Rock Paper Scissors...");
   ans = ans.toLowerCase();
+  if (ans != "rock" || "paper" || "scissors") {
+    playerSelection();
+  }
   return ans;
 }
 
@@ -16,88 +19,62 @@ function playRound() {
   let playerChoice = playerSelection();
 
   if (playerChoice == computerChoice) {
-    return console.log(
-      "You drew!" +
-        " | " +
-        "Player Choice: " +
-        playerChoice +
-        " , " +
-        "Computer Choice: " +
-        computerChoice
-    );
+    return "Draw";
   }
 
   if (playerChoice == "rock" && computerChoice == "scissors") {
-    return console.log(
-      "You Won!" +
-        " | " +
-        "Player Choice: " +
-        playerChoice +
-        " , " +
-        "Computer Choice: " +
-        computerChoice
-    );
+    return "Won";
   }
 
   if (playerChoice == "rock" && computerChoice == "paper") {
-    return console.log(
-      "You lost!" +
-        " | " +
-        "Player Choice: " +
-        playerChoice +
-        " , " +
-        "Computer Choice: " +
-        computerChoice
-    );
-  }
-
-  if (playerChoice == "paper" && computerChoice == "scissors") {
-    return console.log(
-      "You lost!" +
-        " | " +
-        "Player Choice: " +
-        playerChoice +
-        " , " +
-        "Computer Choice: " +
-        computerChoice
-    );
+    return "Lost";
   }
 
   if (playerChoice == "paper" && computerChoice == "rock") {
-    return console.log(
-      "You Won!" +
-        " | " +
-        "Player Choice: " +
-        playerChoice +
-        " , " +
-        "Computer Choice: " +
-        computerChoice
-    );
+    return "Won";
+  }
+
+  if (playerChoice == "paper" && computerChoice == "scissors") {
+    return "Lost";
   }
 
   if (playerChoice == "scissors" && computerChoice == "paper") {
-    return console.log(
-      "You Won!" +
-        " | " +
-        "Player Choice: " +
-        playerChoice +
-        " , " +
-        "Computer Choice: " +
-        computerChoice
-    );
+    return "Won";
   }
 
   if (playerChoice == "scissors" && computerChoice == "rock") {
-    return console.log(
-      "You Lost!" +
-        " | " +
-        "Player Choice: " +
-        playerChoice +
-        " , " +
-        "Computer Choice: " +
-        computerChoice
-    );
+    return "Lost";
   }
 }
 
-playRound();
+function game() {
+  let playerScore = 0;
+  let computerScore = 0;
+
+  for (let i = 0; i < 5; i++) {
+    let gameResult = playRound();
+
+    if (gameResult == "Won") {
+      alert("You Won!");
+      playerScore++;
+    } else if (gameResult == "Lost") {
+      alert("You Lost!");
+      computerScore++;
+    } else if (gameResult == "Draw") {
+      alert("You drew!");
+    }
+  }
+
+  if (playerScore > computerScore) {
+    alert("You won the game!");
+    alert("Player " + playerScore + " | Computer" + computerScore);
+  } else if (playerScore < computerScore) {
+    alert("You lost the game!");
+    alert("Player " + playerScore + " | Computer" + computerScore);
+  } else if (playerScore == computerScore) {
+    alert("You drew the game!");
+    alert("Player " + playerScore + " | Computer" + computerScore);
+  }
+}
+
+game();
