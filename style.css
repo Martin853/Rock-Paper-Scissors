@@ -8,11 +8,11 @@
 }
 
 body {
-  background-color: #d6edff;
+  background-color: #4b3f72;
 }
 
 .navbar {
-  background-color: #84dcc6;
+  background-color: #1f2041;
   width: 100%;
   height: 85px;
   object-fit: cover;
@@ -25,4 +25,107 @@ body {
 .navbar-header {
   font-size: 36px;
   color: white;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 25px;
+}
+
+.content-text {
+  font-size: 32px;
+  color: white;
+  font-weight: bold;
+}
+
+.content-text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.content-items-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 35px;
+  gap: 25px;
+}
+
+.item-text {
+  color: white;
+  font-size: 20 px;
+  font-weight: bold;
+}
+
+.rock {
+  width: 200px;
+  height: 200px;
+  border: 5px solid #101022;
+  border-radius: 25px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.rock:hover {
+  cursor: pointer;
+  background-color: #382f59;
+}
+
+.paper {
+  width: 200px;
+  height: 200px;
+  border: 5px solid #101022;
+  border-radius: 25px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.paper:hover {
+  cursor: pointer;
+  background-color: #382f59;
+}
+
+.scissors {
+  width: 200px;
+  height: 200px;
+  border: 5px solid #101022;
+  border-radius: 25px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.scissors:hover {
+  cursor: pointer;
+  background-color: #382f59;
+}
+
+.result-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.result-text {
+  color: white;
+  font-size: 36px;
+  font-weight: bold;
 }
