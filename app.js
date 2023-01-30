@@ -28,6 +28,7 @@ function restartTheGame() {
   resultTextMain.textContent = "Result";
   resultText.textContent =
     "Player " + playerScore + " | " + "Computer " + computerScore;
+  restartButton.style.display = "none";
 }
 
 //Rock Function
@@ -62,9 +63,81 @@ function rock() {
   }
 }
 
+//Paper Function
+function paper() {
+  // Check Who Won
+  if (gameOver === false) {
+    let computerSelection = generateComputerChoice();
+    switch (computerSelection) {
+      case "rock":
+        playerScore++;
+        resultText.textContent =
+          "Player " + playerScore + " | " + "Computer " + computerScore;
+        break;
+      case "paper":
+        resultText.textContent =
+          "Player " + playerScore + " | " + "Computer " + computerScore;
+        break;
+      case "scissors":
+        computerScore++;
+        resultText.textContent =
+          "Player " + playerScore + " | " + "Computer " + computerScore;
+    }
+  }
+
+  //Check If One Has Reached 5 Points
+  if (playerScore === 5) {
+    resultTextMain.textContent = "Player Won!";
+    restart();
+  } else if (computerScore === 5) {
+    resultTextMain.textContent = "Computer Won!";
+    restart();
+  }
+}
+
+//Scissors Function
+function scissors() {
+  // Check Who Won
+  if (gameOver === false) {
+    let computerSelection = generateComputerChoice();
+    switch (computerSelection) {
+      case "rock":
+        computerScore++;
+        resultText.textContent =
+          "Player " + playerScore + " | " + "Computer " + computerScore;
+        break;
+      case "paper":
+        playerScore++;
+        resultText.textContent =
+          "Player " + playerScore + " | " + "Computer " + computerScore;
+        break;
+      case "scissors":
+        resultText.textContent =
+          "Player " + playerScore + " | " + "Computer " + computerScore;
+    }
+  }
+
+  //Check If One Has Reached 5 Points
+  if (playerScore === 5) {
+    resultTextMain.textContent = "Player Won!";
+    restart();
+  } else if (computerScore === 5) {
+    resultTextMain.textContent = "Computer Won!";
+    restart();
+  }
+}
+
 // Rock Clicked Function
 const rockDiv = document.querySelector(".rock");
 rockDiv.addEventListener("click", rock);
+
+// Rock Clicked Function
+const paperDiv = document.querySelector(".paper");
+paperDiv.addEventListener("click", paper);
+
+// Rock Clicked Function
+const scissorsDiv = document.querySelector(".scissors");
+scissorsDiv.addEventListener("click", scissors);
 
 //Restart Button
 restartButton.addEventListener("click", restartTheGame);
