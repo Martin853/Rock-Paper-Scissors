@@ -2,6 +2,7 @@
 let gameOver = false;
 let playerScore = 0;
 let computerScore = 0;
+const resultText = document.querySelector(".result-displayer");
 
 //Computer Selection
 const items = ["rock", "paper", "scissors"];
@@ -17,19 +18,35 @@ function restart() {
   computerScore = 0;
 }
 
+//Rock Function
 function rock() {
+  // Check Who Won
   if (gameOver === false) {
     let computerSelection = generateComputerChoice();
     switch (computerSelection) {
       case "rock":
-        console.log("Draw");
+        resultText.textContent =
+          "Player " + playerScore + " | " + "Computer " + computerScore;
         break;
       case "paper":
-        console.log("Lost");
+        computerScore++;
+        resultText.textContent =
+          "Player " + playerScore + " | " + "Computer " + computerScore;
         break;
       case "scissors":
-        console.log("Won");
+        playerScore++;
+        resultText.textContent =
+          "Player " + playerScore + " | " + "Computer " + computerScore;
     }
+  }
+
+  //Check If One Has Reached 5 Points
+  if (playerScore === 5) {
+    console.log("Player Won");
+    restart();
+  } else if (computerScore === 5) {
+    console.log("Computer Won");
+    restart();
   }
 }
 

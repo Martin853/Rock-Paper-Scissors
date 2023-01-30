@@ -129,3 +129,22 @@ body {
   font-size: 36px;
   font-weight: bold;
 }
+
+.restart {
+  display: none;
+  margin: 25px 0 25px 0;
+}
+
+.restart-button {
+  background-color: #81667a;
+  color: white;
+  font-size: 42px;
+  padding: 10px;
+  border: solid 5px #101022;
+  border-radius: 35px;
+}
+
+.restart-button:hover {
+  background-color: #67445e;
+  cursor: pointer;
+}
