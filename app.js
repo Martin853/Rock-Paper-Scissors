@@ -54,10 +54,12 @@ function rock() {
   }
 
   //Check If One Has Reached 5 Points
-  if (playerScore === 5) {
+  if (playerScore == 5) {
     resultTextMain.textContent = "Player Won!";
     restart();
-  } else if (computerScore === 5) {
+  }
+
+  if (computerScore == 5) {
     resultTextMain.textContent = "Computer Won!";
     restart();
   }
@@ -86,10 +88,12 @@ function paper() {
   }
 
   //Check If One Has Reached 5 Points
-  if (playerScore === 5) {
+  if (playerScore == 5) {
     resultTextMain.textContent = "Player Won!";
     restart();
-  } else if (computerScore === 5) {
+  }
+
+  if (computerScore == 5) {
     resultTextMain.textContent = "Computer Won!";
     restart();
   }
@@ -118,10 +122,12 @@ function scissors() {
   }
 
   //Check If One Has Reached 5 Points
-  if (playerScore === 5) {
+  if (playerScore == 5) {
     resultTextMain.textContent = "Player Won!";
     restart();
-  } else if (computerScore === 5) {
+  }
+
+  if (computerScore == 5) {
     resultTextMain.textContent = "Computer Won!";
     restart();
   }
