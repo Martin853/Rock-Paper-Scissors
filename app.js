@@ -20,6 +20,16 @@ function restart() {
   gameOver = true;
 }
 
+//Restart The Game
+function restartTheGame() {
+  gameOver = false;
+  playerScore = 0;
+  computerScore = 0;
+  resultTextMain.textContent = "Result";
+  resultText.textContent =
+    "Player " + playerScore + " | " + "Computer " + computerScore;
+}
+
 //Rock Function
 function rock() {
   // Check Who Won
@@ -55,3 +65,6 @@ function rock() {
 // Rock Clicked Function
 const rockDiv = document.querySelector(".rock");
 rockDiv.addEventListener("click", rock);
+
+//Restart Button
+restartButton.addEventListener("click", restartTheGame);
