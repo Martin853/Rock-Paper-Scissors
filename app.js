@@ -10,4 +10,9 @@ function getComputerChoice() {
   return items[Math.floor(Math.random() * items.length)];
 }
 
-console.log(getComputerChoice());
+//Restart
+function restart() {
+  gameOver = false;
+  playerScore = 0;
+  computerScore = 0;
+}
