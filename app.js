@@ -3,6 +3,9 @@ let gameOver = false;
 let playerScore = 0;
 let computerScore = 0;
 const resultText = document.querySelector(".result-displayer");
+const resultTextMain = document.querySelector(".result-text");
+const restartDiv = document.querySelector(".restart");
+const restartButton = document.querySelector(".restart-button");
 
 //Computer Selection
 const items = ["rock", "paper", "scissors"];
@@ -13,9 +16,8 @@ function generateComputerChoice() {
 
 //Restart
 function restart() {
-  gameOver = false;
-  playerScore = 0;
-  computerScore = 0;
+  restartDiv.style.display = "block";
+  gameOver = true;
 }
 
 //Rock Function
@@ -42,10 +44,10 @@ function rock() {
 
   //Check If One Has Reached 5 Points
   if (playerScore === 5) {
-    console.log("Player Won");
+    resultTextMain.textContent = "Player Won!";
     restart();
   } else if (computerScore === 5) {
-    console.log("Computer Won");
+    resultTextMain.textContent = "Computer Won!";
     restart();
   }
 }
