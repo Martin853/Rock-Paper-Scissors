@@ -9,6 +9,7 @@
 
 body {
   background-color: #4b3f72;
+  min-height: 100vh;
 }
 
 .navbar {
@@ -148,4 +149,21 @@ body {
 .restart-button:hover {
   background-color: #67445e;
   cursor: pointer;
+}
+
+footer {
+  position: sticky;
+  top: 100%;
+  background-color: #1f2041;
+  margin-top: 10px;
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-text {
+  color: white;
+  font-weight: bold;
+  font-size: 32px;
 }
