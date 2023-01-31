@@ -6,6 +6,7 @@ const resultText = document.querySelector(".result-displayer");
 const resultTextMain = document.querySelector(".result-text");
 const restartDiv = document.querySelector(".restart");
 const restartButton = document.querySelector(".restart-button");
+const selectedDisplayer = document.querySelector("#selected-display");
 
 //Computer Selection
 const items = ["rock", "paper", "scissors"];
@@ -28,7 +29,8 @@ function restartTheGame() {
   resultTextMain.textContent = "Result";
   resultText.textContent =
     "Player " + playerScore + " | " + "Computer " + computerScore;
-  restartButton.style.display = "none";
+  selectedDisplayer.textContent = "Choose Rock Paper or Scissors";
+  restartDiv.style.display = "none";
 }
 
 //Rock Function
@@ -40,16 +42,21 @@ function rock() {
       case "rock":
         resultText.textContent =
           "Player " + playerScore + " | " + "Computer " + computerScore;
+        selectedDisplayer.textContent = "Player: Rock | Computer: Rock , Draw";
         break;
       case "paper":
         computerScore++;
         resultText.textContent =
           "Player " + playerScore + " | " + "Computer " + computerScore;
+        selectedDisplayer.textContent =
+          "Player: Rock | Computer: Paper , Computer Wins";
         break;
       case "scissors":
         playerScore++;
         resultText.textContent =
           "Player " + playerScore + " | " + "Computer " + computerScore;
+        selectedDisplayer.textContent =
+          "Player: Rock | Computer: Scissors , Player Wins";
     }
   }
 
@@ -75,15 +82,21 @@ function paper() {
         playerScore++;
         resultText.textContent =
           "Player " + playerScore + " | " + "Computer " + computerScore;
+        selectedDisplayer.textContent =
+          "Player: Paper | Computer: Rock , Player Wins";
         break;
       case "paper":
         resultText.textContent =
           "Player " + playerScore + " | " + "Computer " + computerScore;
+        selectedDisplayer.textContent =
+          "Player: Paper | Computer: Paper , Draw";
         break;
       case "scissors":
         computerScore++;
         resultText.textContent =
           "Player " + playerScore + " | " + "Computer " + computerScore;
+        selectedDisplayer.textContent =
+          "Player: Paper | Computer: Scissors , Computer Wins";
     }
   }
 
@@ -109,15 +122,21 @@ function scissors() {
         computerScore++;
         resultText.textContent =
           "Player " + playerScore + " | " + "Computer " + computerScore;
+        selectedDisplayer.textContent =
+          "Player: Scissors | Computer: Rock , Computer Wins";
         break;
       case "paper":
         playerScore++;
         resultText.textContent =
           "Player " + playerScore + " | " + "Computer " + computerScore;
+        selectedDisplayer.textContent =
+          "Player: Scissors | Computer: Paper , Player Wins";
         break;
       case "scissors":
         resultText.textContent =
           "Player " + playerScore + " | " + "Computer " + computerScore;
+        selectedDisplayer.textContent =
+          "Player: Scissors | Computer: Scissors , Draw";
     }
   }
 
