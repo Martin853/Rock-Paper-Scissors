@@ -167,3 +167,33 @@ footer {
   font-weight: bold;
   font-size: 32px;
 }
+
+@media (max-width: 450px) {
+  .navbar-header {
+    font-size: 30px;
+  }
+
+  .content-text {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .content-items-container {
+    flex-wrap: wrap;
+  }
+
+  .result-text {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .footer-text {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .content {
+    margin-top: 5%;
+  }
+}
