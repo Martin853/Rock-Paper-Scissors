@@ -166,3 +166,24 @@ scissorsDiv.addEventListener("click", scissors);
 
 //Restart Button
 restartButton.addEventListener("click", restartTheGame);
+
+// Responsive
+document.addEventListener("DOMContentLoaded", changeIconsSize);
+
+function changeIconsSize() {
+  let query = window.matchMedia("(max-width: 450px)");
+
+  if (query.matches) {
+    let rock = document.querySelector(".fa-hand-back-fist");
+    rock.classList.remove("fa-10x");
+    rock.classList.add("fa-6x");
+
+    let paper = document.querySelector(".fa-hand");
+    paper.classList.remove("fa-10x");
+    paper.classList.add("fa-6x");
+
+    let scissors = document.querySelector(".fa-hand-scissors");
+    scissors.classList.remove("fa-10x");
+    scissors.classList.add("fa-6x");
+  }
+}

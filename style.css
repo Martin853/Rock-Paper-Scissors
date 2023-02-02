@@ -190,6 +190,37 @@ footer {
   .footer-text {
     font-size: 20px;
   }
+
+  .rock {
+    width: 120px;
+    height: 120px;
+  }
+
+  .paper {
+    width: 120px;
+    height: 120px;
+  }
+
+  .scissors {
+    width: 120px;
+    height: 120px;
+  }
+
+  .content {
+    margin-top: 7rem;
+  }
+}
+
+@media (max-width: 350px) {
+  .content {
+    margin-top: 3rem;
+  }
+}
+
+@media (min-width: 760px) {
+  .content {
+    margin-top: 5rem;
+  }
 }
 
 @media (min-width: 1400px) {
