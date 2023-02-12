@@ -2,7 +2,7 @@
 
 <h2>A simple project for The Odin Project about creating a rock paper scissors game.</h2>
 <p>In this project i got to use a website like https://fontawesome.com/ and technologies like flexbox. Also i got to make the site responsive."
-<a href="https://martin853.github.io/Rock-Paper-Scissors/">Link to website</a>
+<p><a href="https://martin853.github.io/Rock-Paper-Scissors/">Link to website</a><p>
 
 <h3>The skills that i used for this project were</h3>
 <ul>
