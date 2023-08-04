@@ -143,7 +143,7 @@ body {
   font-weight: bold;
   padding: 10px;
   border: solid 5px #101022;
-  border-radius: 35px;
+  border-radius: 15px;
 }
 
 .restart-button:hover {
